@@ -13,7 +13,7 @@ The findings of this project will establish whether “wisdom of the crowd” on
 1. Reddit Data:
 + **Focus:** Posts about selected companies on the "r/wallstreetbets", "r/stocks", "r/investing" Subreddits
 + **Data to Collect:** Post titles, content, number of comments, upvote ratios, timestamps
-+ **Collection Method:** Reddit API (using PRAW library in Python)
++ **Collection Method:** 
 
 2. Stock Market Data:
 + **Data to Collect:** Daily open, high, low, close prices, and trading volume of selected companies stocks
