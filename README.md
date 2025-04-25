@@ -54,19 +54,23 @@ As data accumulates over time:
 + The statistical power of the test increases
 + The analysis becomes more robust against daily anomalies
 
-## Implementation Details:
-
-
 ## Results:
+<ins>First Run</ins> (2025-04-24, 21.00)
++ Executed the code main.ipynb for the first time.
++ Scraped 18 crypocurrencies' sentiment scores and 24-hour price-change from Chart Exchange for 2025-04-24.
++ Appended ~19 rows to daily_crypto_sentiment.csv dated 2025-04-24.
++ Conducted Pearson correlation on this single-day sample (n ≈ 19), reported r and p, and displayed the scatter plot of sentiment vs. return.
+<img width="763" alt="image" src="https://github.com/user-attachments/assets/6bf3ec31-13b9-4611-addd-33c5ab499480" />
 
-
-
-
-
-
+<ins>Final Run</ins>
++ Reran the code, scraped ~19 new observations for 2025-04-25. (total n ≈ 38)
++ Appended these to the CSV, bringing the cumulative dataset to ~38 rows.
++ Performed the **overall** Pearson test across all observations (n ≈ 38) and updates the scatter plot to reflect the full sample.
+<img width="753" alt="image" src="https://github.com/user-attachments/assets/5e21f5ef-8421-45cb-90d7-d5c684cc346b" />
 
 ## Limitations and Future Work:
-
++ Single-day horizon: It may take longer than 24 hours for sentiment to fully feed into prices.
++ Hypothesis Test Result: To achieve more reliable and precise results, a larger sample size than currently available is needed. Given the time constraints so far, the dataset remains limited. Throughout the remainder of this project, the code will be continued to run daily -manually at present- to accumulate additional observations and increase sample size. As the sample grows, the statistical power of the hypothesis test will increase, yielding more accurate conclusions.
 
   
    
