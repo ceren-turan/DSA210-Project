@@ -62,7 +62,7 @@ As data accumulates over time:
 + Conducted Pearson correlation on this single-day sample (n ≈ 19), reported r and p, and displayed the scatter plot of sentiment vs. return.
 <img width="763" alt="image" src="https://github.com/user-attachments/assets/6bf3ec31-13b9-4611-addd-33c5ab499480" />
 
-<ins>Final Run</ins>
+<ins>Final Run</ins> (2025-04-25, 21.00)
 + Reran the code, scraped ~19 new observations for 2025-04-25. (total n ≈ 38)
 + Appended these to the CSV, bringing the cumulative dataset to ~38 rows.
 + Performed the **overall** Pearson test across all observations (n ≈ 38) and updates the scatter plot to reflect the full sample.
