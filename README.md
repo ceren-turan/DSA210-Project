@@ -67,8 +67,7 @@ As data accumulates over time:
 + Appended these to the CSV, bringing the cumulative dataset to ~38 rows.
 + Performed the **overall** Pearson test across all observations (n ≈ 38) and updates the scatter plot to reflect the full sample.
 <img width="753" alt="image" src="https://github.com/user-attachments/assets/5e21f5ef-8421-45cb-90d7-d5c684cc346b" />
-\
-\
+
 The executions so far indicate that the null hypothesis cannot be rejected and that there is no significant correlation between Reddit sentiment and 1-day returns for cryptocurrencies. For the remainder of this project, the code will be executed daily to expand the cumulative dataset and enhance the precision of the analysis. The Pearson hypothesis test result computed and displayed on the final execution will form the basis of the conclusion. 
 
 ## Limitations and Future Work:
