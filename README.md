@@ -4,38 +4,45 @@ This project aims to examine if public sentiment expressed on social media platf
 The findings of this project will establish whether “wisdom of the crowd” on financial social media measurably affects stock prices, and will uncover patterns that might guide investment strategies.
 
 ## Hypotheses
-**Null Hypothesis:** There is no statistically significant relationship between social media sentiment about companies and their subsequent stock price movements within a 1-3 day time frame.\
+**Null Hypothesis:** There is no statistically significant relationship between Reddit sentiment about cryptocurrencies and their subsequent stock price movements within a 1-day time frame.\
 <br/>
-**Alternative Hypothesis:** Social media sentiment about companies has a statistically significant relationship with subsequent stock price movements, where positive sentiment correlates with positive returns and negative sentiment correlates with negative returns within a 1-3 day time frame.
+**Alternative Hypothesis:** Reddit sentiment about cryptocurrencies has a statistically significant relationship with subsequent stock price movements, where positive sentiment correlates with positive returns and negative sentiment correlates with negative returns within a 1-day time frame.
 
 ## Data Sources and Collection Methods
-<ins>Primary Data Sources</ins>
+Data collection occurs daily, building a longitudinal dataset for analysis.
+<ins>Data Sources</ins>
 1. Reddit Data:
-+ **Focus:** Posts about selected companies on the "r/wallstreetbets", "r/stocks", "r/investing" Subreddits
-+ **Data to Collect:** Post titles, content, number of comments, upvote ratios, timestamps
-+ **Collection Method:** 
++ **Collection Method:** Daily web scrape via BeautifulSoup of Chart Exchange (https://chartexchange.com/trends/reddit/mentions/cx-all/), a website which calculates Reddit sentiment and 1-day price returns from various cryptocurrency-focused subreddits.
++ **Data to Collect:** Ticker, type (stock or crypto), sentiment score, 1-day price-change estimate (for reference)
 
-2. Stock Market Data:
-+ **Data to Collect:** Daily open, high, low, close prices, and trading volume of selected companies stocks
-+ **Collection Method:** Yahoo Finance API
+2. Price Returns:
++ **Data to Collect:** Next-day closing-price return for each cryptocurrency
++ **Collection Method:** Yahoo Finance API (via yfinance), pulling the previous day's close and the subsequent day's close 
 
-<ins>Enrichment Data Sources</ins>
-1. Market Index Data:
-+ **Data to Collect:** NASDAQ, S&P 500 index values
-+ **Collection Method:** Yahoo Finance API
+## Data Processing Pipeline
+1. Data Acquisition:
++ Daily scraping of Reddit sentiment from Chart Exchange (additionaly collecting 1-day price return data as reference)
++ Retrieval of corresponding cryptocurrency prive data from Yahoo Finance
 
-## Planned Data Analysis Methods and Tools
-<ins>1. Data Collection:</ins>
-+ Extract company tickers and names from text data
-+ Collect sentiment data for each company
+2. Data Preprocessing:
++ Cleaning sentiment scores
++ Calculation of next-day returns
++ Removal of records with missing data points
 
-<ins>3. Visualization:</ins>
-+ Using Matplotlib and Seaborn to visualize the correlations between the variables (sentiment scores and stock price shifts)
+3. Data Storage
++ Daily results are appended to a CSV file
++ This creates a growing longitudinal dataset for ongoing analysis
+
+4. Visualization:
++ Daily scatter plots are generated to visualize the relationship between sentiment and returns
++ These visualizations provide feedback on daily patterns
 
 <ins>4. Correlation Analysis (Hypothesis Testing):</ins>\
-Using the visualizations;
-+ Examine correlations between sentiment scores and stock price movements
-+ Look for time lags to determine whether sentiment changes precede price changes
+The primary statistical method employed is Pearson correlation analysis, which measures the linear relationship between two continous variables:
++ The independent variable is the Reddit sentiment score
++ The dependent variable is the next-day price return
++ Correlation coefficient (r) quantifies the strength and direction of the relationship
++ P-value determines statistical significance
   
   
    
