@@ -37,12 +37,25 @@ Data collection occurs daily, building a longitudinal dataset for analysis.
 + Daily scatter plots are generated to visualize the relationship between sentiment and returns
 + These visualizations provide feedback on daily patterns
 
-<ins>4. Correlation Analysis (Hypothesis Testing):</ins>\
+## Correlation Analysis (Hypothesis Testing):
 The primary statistical method employed is Pearson correlation analysis, which measures the linear relationship between two continous variables:
 + The independent variable is the Reddit sentiment score
 + The dependent variable is the next-day price return
 + Correlation coefficient (r) quantifies the strength and direction of the relationship
 + P-value determines statistical significance
-  
+
+Framework:
++ Significance level (α) is set at 0.05
++ If p-value < 0.05, the null hypothesis is rejected, indicating a statistically significant relationship
++ If p-value ≥ 0.05, the null hypothesis cannot be rejected
+
+Longitudinal Perspective:
+As data accumulates over time:
++ The statistical power of the test increases
++ The analysis becomes more robust against daily anomalies
+
+Limitations and Future Work:
+
+
   
    
