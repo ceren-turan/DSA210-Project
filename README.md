@@ -49,7 +49,7 @@ Framework:
 + If p-value < 0.05, the null hypothesis is rejected, indicating a statistically significant relationship
 + If p-value ≥ 0.05, the null hypothesis cannot be rejected
 
-Longitudinal Perspective:
+Longitudinal Perspective:\
 As data accumulates over time:
 + The statistical power of the test increases
 + The analysis becomes more robust against daily anomalies
