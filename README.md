@@ -69,7 +69,7 @@ As data accumulates over time:
 <img width="753" alt="image" src="https://github.com/user-attachments/assets/5e21f5ef-8421-45cb-90d7-d5c684cc346b" />
 
 ## Limitations and Future Work:
-+ Single-day horizon: It may take longer than 24 hours for sentiment to fully feed into prices.
++ Single-day horizon: So far, the code only measures 1-day returns. However, it may take longer than 24 hours for sentiment to fully feed into prices.
 + Hypothesis Test Result: To achieve more reliable and precise results, a larger sample size than currently available is needed. Given the time constraints so far, the dataset remains limited. Throughout the remainder of this project, the code will be continued to run daily -manually at present- to accumulate additional observations and increase sample size. As the sample grows, the statistical power of the hypothesis test will increase, yielding more accurate conclusions.
 
   
