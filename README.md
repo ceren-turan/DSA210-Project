@@ -57,7 +57,7 @@ As data accumulates over time:
 ## Results:
 <ins>First Run</ins> (2025-04-24, 21.00)
 + Executed the code main.ipynb for the first time.
-+ Scraped 18 crypocurrencies' sentiment scores and 24-hour price-change from Chart Exchange for 2025-04-24.
++ Scraped 19 crypocurrencies' sentiment scores and 24-hour price-change from Chart Exchange for 2025-04-24.
 + Appended ~19 rows to daily_crypto_sentiment.csv dated 2025-04-24.
 + Conducted Pearson correlation on this single-day sample (n ≈ 19), reported r and p, and displayed the scatter plot of sentiment vs. return.
 <img width="763" alt="image" src="https://github.com/user-attachments/assets/6bf3ec31-13b9-4611-addd-33c5ab499480" />
