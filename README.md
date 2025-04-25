@@ -54,6 +54,9 @@ As data accumulates over time:
 + The statistical power of the test increases
 + The analysis becomes more robust against daily anomalies
 
+## Implementation Details:
+
+
 ## Results:
 
 
